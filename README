@@ -1,0 +1,3 @@
+Flashify is a simple utility app that takes a url from the Share Intent in Android and opens it in another browser. It was orginally designed to easily open Adobe Flash websites in a browser that supports Flash but is equally useful for quickly testing mobile websites in multiple browsers.
+
+You can install the app from Google Play https://play.google.com/store/apps/details?id=com.nightshadelabs.anotherbrowser

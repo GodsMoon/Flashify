@@ -20,6 +20,7 @@ public class AnotherBrowserActivity extends Activity {
 		if (intent != null) {
 
             if (intent.getAction().equals(Intent.ACTION_SEND)) {
+
                 if(BuildConfig.DEBUG)
                     Log.d("TAG","intent.getAction().equals(Intent.ACTION_SEND)");
 
@@ -27,7 +28,7 @@ public class AnotherBrowserActivity extends Activity {
 
                 Uri uri = findUrlInString(urlText);
 
-				Intent i = new Intent(Intent.ACTION_VIEW);
+                Intent i = new Intent(Intent.ACTION_VIEW);
 
                 if(uri != null) {
                     i.setData(uri);

@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        minSdkVersion 7
+        targetSdkVersion 21
+        versionCode 3
+        versionName "1.2"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(System.getenv("NIGHTSHADE_KEYSTORE"))
+            storePassword System.getenv("NIGHTSHADE_KEYSTORE_PASSWORD")
+            keyAlias System.getenv("NIGHTSHADE_KEY_ALIAS")
+            keyPassword System.getenv("NIGHTSHADE_KEY_PASSWORD")
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+}
